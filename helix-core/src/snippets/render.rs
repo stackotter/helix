@@ -46,7 +46,7 @@ impl Tabstop {
             self.ranges
                 .iter()
                 .map(|&range| {
-                    let mut range = selection::Range::new(range.start, range.end);
+                    let mut range = selection::Range::new(range.start, range.end + 1);
                     if direction == Direction::Backward {
                         range = range.flip()
                     }
